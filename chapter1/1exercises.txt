@@ -1,0 +1,114 @@
+1) What are the rules for naming variables in Python? I.e. what does (and doesn’t) Python accept as valid variable names?
+
+Ans : 
+ - A variable must start with a letter or an underscore
+ - A variable name cannot start with a number
+ - A variable name can only contain alpha-numeric characters
+ - Variable names are case sensitive
+ - Reserved key words cannot be used for naming variables
+
+2) What are some other basic data types in Python?
+Ans :
+ - Numeric
+ - String
+ - Sequence
+ - Binary
+ - Mapping
+ - Boolean
+ - set
+
+3) The “list” data type is an example of a collection. What other
+collection data types does Python support?
+Ans :
+ - List [Array like accepts different data types in ordered sequence]
+ - Tuple [Takes different data types but here the data is immutable]
+ - Dictionary [unordered sequence of key : value pair data]
+
+4) What is a “boolean” data type (`bool` in Python) and why is it
+special? What operations can be performed on data of type
+`bool`?
+Ans :
+ - A boolean is used to represent the truth value of an expression.A bool operation can be used to     
+   return or convert a value to a Boolean value
+
+5) What are some different data types you can use for representing
+   monetary values (an amount of money) in Python? What are the advantages and drawbacks of using    
+   each of these types for this purpose?
+Ans:
+ - Floating point numbers: Its basic way, simple to use and understand but prone to rounding errors
+ - Decimal: No rounding errors and better control over precision however its slower and uses more  
+   Memory.
+ - Fixed-point: Similar to decimal module but smaller performance & memory footprint
+ Third party money libraries:
+   Moneyed: This is a third-party library that extends the Decimal class to support currencies and. 
+   exchange rates. It provides support for formatting, currency symbols, and internationalization, 
+   and it can be useful for international financial applications.
+   Python-money: Also a third-party library which provides a simple, pythonic way to represent, 
+   exchange and format money. It allows to handle multiple currencies at the same time and has a 
+   simple, easy to use syntax.
+***************************************************
+ In Python, the date and datetime modules provide different classes for working with dates and times.
+
+ date is a module that provides the date class, which is used to represent a specific date (year,   
+ month, and day) without a time. It has three attributes: year, month, and day. The date class has  
+ methods for working with dates, such as today(), fromisoformat(), etc.
+
+            from datetime import date
+            today = date.today()
+            print(today.year)
+            print(today.month)
+            print(today.day)
+
+ datetime is a module that provides the datetime class, which is used to represent a specific date  
+ and time. It has attributes for the date (year, month, and day) and time (hour, minute, second, and
+ microsecond), as well as a time zone. The datetime class has methods for working with datetimes,  
+ such as now(), fromisoformat(), etc.
+	     from datetime import datetime
+	     now = datetime.now()
+	     print(now.year)
+	     print(now.month)
+	     print(now.day)
+	     print(now.hour)
+	     print(now.minute)
+	     print(now.second)
+*****************************************************
+How are timezones handled in Python
+In Python, time zones are handled using the pytz library. pytz is a third-party library that provides support for working with time zones, including support for all time zones defined in the IANA (Internet Assigned Numbers Authority) time zone database.
+
+The pytz library provides the timezone class, which is used to represent a specific time zone. You can create a timezone object using the timezone function, and passing in the offset from UTC (Coordinated Universal Time) for that time zone. For example, to create a time zone object for Eastern Standard Time (EST), which is UTC-5, you would use the following code:
+	from datetime import datetime
+	from pytz import timezone
+	est = timezone('US/Eastern')
+Once you have a timezone object, you can use it to create datetime objects that are aware of the time zone. For example, the following code creates a datetime object that represents the current date and time in Eastern Standard Time:
+	now = datetime.now(est)
+You can also use the pytz library to convert between time zones. For example, the following code converts a datetime object from Eastern Standard Time to Pacific Standard Time:
+	pst = timezone('US/Pacific')
+	now_pst = now.astimezone(pst)
+The pytz library is a very powerful library to handle timezones, it also provides a method all_timezones to see all the time zones that are in the library. The module also has other features like localize, normalize which makes it a powerful library for handling timezones for different date time operations.
+********************************************************
+What are some ways to convert a Python `date` or `datetime` to a string?
+strftime() method: This method is available on both the date and datetime classes and can be used to format a date or datetime object as a string using the strftime() formatting codes. For example, the following code converts a date object to a string in the format "YYYY-MM-DD":
+	from datetime import date
+	d = date(2022, 11, 14)
+	print(d.strftime('%Y-%m-%d')) # "2022-11-14"
+
+str() method: The built-in str() method can be used to convert a date or datetime object to a string in the format "YYYY-MM-DD" or "YYYY-MM-DD HH:MM:SS", respectively. For example, the following code converts a datetime object to a string:
+
+	from datetime import datetime
+	dt = datetime(2022, 11, 14, 12, 30, 15)
+	print(str(dt)) # "2022-11-14 12:30:15"
+
+Using format() method : datetime and date objects also have a format() method which accepts the string formatting codes, as well as user defined templates. The format codes will be replaced by the corresponding values while formatting.
+
+	from datetime import datetime
+	dt = datetime(2022, 11, 14, 12, 30, 15)
+	formatted_datetime = "The date is: {}-{}-{} {}:{}:{}".format(dt.year, dt.month, dt.day, 	
+	dt.hour, dt.minute, dt.second)
+	print(formatted_datetime) # "The date is: 2022-11-14 12:30:15"
+*******************************************************
+What is “ISO formatting” for dates and times? What are some ways to convert a string to a `date` or `datetime`?
+Using isoformat() method : datetime and date objects also have a isoformat() method which returns date or datetime as string in ISO format i.e YYYY-MM-DDTHH:MM:SS.mmmmmm where T is the separator between date and time.
+	from datetime import datetime
+	dt = datetime(2022, 11, 14, 12, 30, 15)
+	print(dt.isoformat()) # "2022-11-14T12:30:15"
+
