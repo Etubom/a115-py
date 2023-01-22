@@ -22,9 +22,30 @@ Ans  :
 3)  How do you check "list membership" in python?In other words, if I have a list of fruits, what
      is the simplest way to check whether there is an 'apple' in the list?
 Ans   :
-       -  By using the "in" keyword
-          fruits=["apple","mangoe","orange"]
+       -  By using the "in" and "not in" keyword
+          fruits=["apple","mango","orange"]
           print("apple" in fruits) //True
+4)  EXTRA CREDIT: What are the limitations on what kinds of values can be placed in a set?For example, can you include
+    a whole list as one of the elements of a set?Why or why not?What happens in python when
+    you try to do that?
+     -   Sets can only contain unique values that are hashable
+         so print(set('hello')) // {'l','e','o','h'}
+     -   Since lists aren't hashable, python doesn't accept them as an element within a set and will throw a TypeError
+5)  How cn you turn a list into a tuple or a set?Can you freely convert between any two of these?
+     -   We can freely convert bewteen lists,sets and tuples by passing their data types as arguments
+         to required formats eg set(list or tuple type),list(set or tuple type),tuple(set or list type)
+
+6)   Thinking about Boolean logic, what cn you learn about the concept of
+     "Truth value" in python?What are some examples of things that are "truthy" in python?What are some
+     examples of things that are "falsy"
+     -   Truth values evaluate to 'True' in a boolean context
+     -   Non-empty sequences or collection (lists,tuples,strings,dictionaries,sets),numeric values that
+         that are not zero and True are truthy values in python
+     -   Falsy value include empty sequences (lists,tuples,strings,dictionaries,sets),zero in
+         every numeric type,none and False
+7)    If you have a variable "x" which has been assigned some value,how can you ask python what
+      the data type of "x" is?
+      - type(x)
 
 
 
