@@ -6,7 +6,7 @@ print("Name is",character_name)
 character_age=25
 print("Age is",character_age)
 character_dob=date(1960, 11, 11)
-print("Character dob is",character_dob)
+print("Character dob is",character_dob.strftime('%d/%b/%Y'))
 character_net_worth = '{0:.2f}'.format(50000)
 print("Their net worth is ", '$'+ character_net_worth)
 character_super_powers=['reading', 'running', 'dancing']
