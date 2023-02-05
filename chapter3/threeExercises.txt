@@ -1,0 +1,35 @@
+1) What are the various operations that can be performed on dictionaries and their elements?
+   What does the `.pop()` method do on a dictionary?
+   -Python dictionaries have the following methods - clear(),get(),items(),keys(),values(),pop()
+    popitem(),update()
+    pop() takes in a dict key as an argument ,removes the key from the dict and returns its value
+    and raises a keyError exception if the key is not in the dictionary
+
+2) What are the limitations on what kinds of values can be used as keys in a dictionary?
+   -Dictionary keys must always be an immutable data type such as strings,numbers or tuples
+
+3)  We saw one way of defining a new dictionary - using the literal expression
+    `d = {“key1”: “value1”, “key2”: “value2”, “key3”: “etc.”}`. There is another way to do the same.
+     How can you use the name of the data type (`dict`) to create a new dictionary?
+     -We can use the in-built dict() function anda pass it a list of key value pairs.
+       A list of tuples will do eg sample_dict = dict([(key,value),(key,value),(key,value)])
+
+4)   How do we check for key membership in a dictionary? For example, in the dictionary from the previous exercise,
+     how can we check whether the key “key4” is in the dictionary `d` or not?
+     - passing 'key4' as an argument to the dictionary's get() method eg d.get('key') would return 'none'
+
+5)   What is the difference between the following two code snippets:
+        if a > 5:
+            a += 1
+        a = a *2
+        And:
+        if a > 5:
+            a += 1
+        else:
+            a = a * 2
+      - The way the second block of code is written makes it more verbose but alot clearer
+
+6)    Can a single “if” statement create more than two branches in a programme?
+      -  No,an "IF" statement has two branches
+
+7)
