@@ -1,0 +1,50 @@
+
+1.) Other than the “for” loop, which is very convenient for iterating over a collection of items,
+    what other types of loops are there in Python?
+    Ans ~ Python also has a 'while' loop and the ability for us to have our loops exist inside the
+          body of another in a 'nested' format.
+
+2.) What are the rules and conventions for naming Python functions?
+    Ans ~ Functions are defined using the 'def' keyword ,your function name should briefly describe
+          what it does and ideally it should be doing one thing.
+
+3.) Are variables defined inside a function visible outside of it? (i.e. can you actually access
+    the variable `occurrences` in our sample function above, outside of the function definition?)
+    Conversely, are variables defined outside of a function visible inside of it?
+    Ans ~ Variables declared inside a function can't be accessed outside the function but a
+          variable declared outside a function can be accessed from within a function.
+
+4.) What does the built-in function `locals()` do?
+    Ans ~ locals() method returns a dictionary with all the local variables and symbols for
+          the current program.
+
+5.) What are “global” variables and how do they work in Python?How can you access the
+    value of a global variable inside a function? How can you modify the value of
+    a global variable inside a function?
+    Ans ~ Global variables are variables declared within the global scope of our python program
+          and are available/accessible by all our code.If your function tries to access a variable
+          that isn't declared within it's local scope,python checks the outer scope up to the
+          global scope/environment.To modify the value of our global variable inside our function,
+          we have to explicitly tell python to do this using the "global" keyword when accessing
+          the variable from within our function.
+
+6.) What happens when you `print()` a function? What’s the difference between
+    `print(reverse(‘123’))` and `print(reverse)`? What is the data type of each printed value?
+    Ans ~ print(reverse('123')) calls the reverse method with '123' as an argument and its result
+          passed to print method which prints it to our console whereas print(reverse) returns the
+          location in memory where the reverse() method is located to our console.
+
+7.) How can you make a function return 2 values?
+    Ans ~ We do this by making them comma separated values as part of our return statement anad they
+          will be of type tuple.
+
+8.) What does the `enumerate()` function do?
+    Ans ~ The enumerate() function converts a collection into an object that contains a counter
+          as a key for each value within the object making items easier to access.
+
+9.) EXTRA CREDIT: What is the meaning of this code in a Python
+    script: `if __name__ == “__main__”:`
+    Ans ~ it allows you to execute code when the file runs as a script but not when it's imported
+          as a module.
+
+10.)

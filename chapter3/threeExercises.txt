@@ -32,4 +32,3 @@
 6)    Can a single “if” statement create more than two branches in a programme?
       -  No,an "IF" statement has two branches
 
-7)
