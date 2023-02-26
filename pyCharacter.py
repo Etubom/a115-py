@@ -1,20 +1,19 @@
 character_super_powers = {'reading':81, 'running':55, 'dancing':60,'jumping':70,'invisibility':45, 'blink':80}
-character_wallet = {'dollars':'{:,.2f}'.format(170),'pounds':'{:,.2f}'.format(50),'euros':'{:,.2f}'.format(38)}
+character_wallet = {'dollars':170.0,'pounds':50.0,'euros':38.0}
 
 def super_powers_at_or_above_given_number(dict,num):
     filtered_list_of_powers = []
     for key in dict:
         if dict[key] >= num:
-            filtered_list_of_powers += {key}
+            filtered_list_of_powers.append(key)
     return filtered_list_of_powers
 
 
 def spend_money(wallet, currency, amount):
-
-    if (int(float(wallet.get(currency))) - amount) > 0:
-            new_currency_value = float(wallet.get(currency)) - amount
-            wallet[currency] = new_currency_value
-            return 'you have spent '+ currency + f" {amount}"
+    remaining_amount = int(wallet.get(currency)) - amount
+    if (remaining_amount > 0) :
+            wallet[currency] =  remaining_amount
+            return f"you have spent  {currency} {amount}"
     return 0
 
 def main():
