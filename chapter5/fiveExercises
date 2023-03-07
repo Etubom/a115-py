@@ -1,0 +1,24 @@
+1. What’s a built-in Python function to add up the values of all the numbers in a list?
+   What’s a built-in Python function to find the smallest number in a list? How about the largest?
+
+Ans ~ sum(),min(),max()
+
+2. What do the functions `any()` and `all()` do in Python?
+
+Ans ~ They are both python in-built functions that operate on iterables like lists,tuples and sets.
+       The any() function returns true because atleast one element in the iterable is true while
+       the all() function only returns true if "All" iterable elements are true but false if only
+       one is false.
+3. Write a function which takes a list of numbers and returns the
+   sum of their squares. Does your function still work if the input list is empty?
+   Why (or why not?).
+Ans ~   numbers = [1,2,3]
+        def sum_of_squares(numbers):
+            return sum([x**2 for x in numbers])
+        print(sum_of_squares(numbers))
+      The function still works if the list is empty because it's sum will be zero
+4. Write a function called `apply()` which takes two arguments:
+    a. A list of `items`;
+    b. Another function `f`, which takes a single value and returns a single value;
+    Your function should return a list in which each value is the result of applying
+    the function `f` on the corresponding value in `items`.
