@@ -22,3 +22,10 @@ Ans ~   numbers = [1,2,3]
     b. Another function `f`, which takes a single value and returns a single value;
     Your function should return a list in which each value is the result of applying
     the function `f` on the corresponding value in `items`.
+
+
+5. What is a “higher-order function”? What can you learn about “functional programming”?
+Ans ~ A higher-order function is a function that takes one or more functions as arguments
+      and/or returns a function as its result.
+      * Code written in a functional style has brevity as part of its key benefits,the code
+         is performant,has fewer errors and is easier to test.
