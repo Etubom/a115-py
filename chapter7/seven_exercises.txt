@@ -1,0 +1,43 @@
+1. What is “tech debt”? Why is that a thing? What are some ways of managing it?
+   "Tech debt" is a metaphorical term that refers to the cost of maintaining a software system that has been developed
+   quickly, with shortcuts or using outdated technologies, resulting in code that is difficult to modify or extend in the future.
+   Some ways of managing tech debt include tracking it, prioritizing it, and allocating resources to pay it down.
+   A good practice is to balance adding new features with refactoring and improving the existing codebase to avoid accumulating more tech debt.
+ -
+2. What is the meaning of the term “spaghetti code”?
+    "Spaghetti code" is a derogatory term that describes source code that is poorly structured
+    and difficult to understand or maintain. It usually results from poor coding practices,
+    such as using too many global variables, writing overly complex code, or failing to organize code into modular components.
+
+3. What is the meaning of “cruft”?
+    "Cruft" refers to the accumulation of obsolete or unnecessary code, data, or features that
+    clutter a system and make it more difficult to maintain or improve. It can also refer to the accumulation of files,
+    directories, or other artifacts that are no longer needed or have become outdated.
+
+4. What is the DRY principle?
+    The DRY principle, which stands for "Don't Repeat Yourself," is a software development principle
+    that promotes code reuse and maintenance by avoiding duplication. It means that a piece of knowledge
+    should have a single, unambiguous representation in the system, reducing the risk of errors and making it easier to
+     maintain or modify the code in the future.
+
+5. What is “refactoring”?
+    "Refactoring" is the process of improving the design, structure, and quality of existing code without changing
+    its external behavior. It aims to make the code more maintainable, extensible, and easier to understand by
+    removing code duplication, simplifying complex logic, and making the code conform to best practices.
+
+6. Which principles and techniques have we learned so far, for keeping code cleaner?
+    Some principles and techniques for keeping code cleaner include following best practices
+    such as the DRY principle, avoiding code duplication, breaking down complex code into
+    smaller, more manageable components, writing clear and readable code, and continuously
+    refactoring the codebase.
+
+7. What are some ways of debugging Python code?
+    Some ways of debugging Python code include using print statements, logging, debugging tools
+    such as pdb or PyCharm's debugger, using a linter to detect syntax or style errors, and
+    writing unit tests to catch errors early in the development process.
+
+
+
+
+
+

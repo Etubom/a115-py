@@ -1,0 +1,35 @@
+1. What is “PEP8”?
+Ans ~ "PEP8" stands for Python Enhancement Proposal 8.
+It is a style guide for Python code that provides recommendations on how to write code that is easy to read and maintain.
+PEP8 covers topics such as code layout, whitespace, comments, naming conventions, and programming practices.
+
+2. What is a “linter”?
+Ans ~ A "linter" is a tool that analyzes source code to detect and report errors, potential issues, and style violations.
+It checks the code against a set of predefined rules or style guidelines and provides feedback to the developer to
+ improve the code's quality, readability, and maintainability.
+
+3. What are some popular Python linters?
+Ans ~ Some popular Python linters include:
+PyLint: checks for errors, style issues, and common programming mistakes
+Flake8: combines PyFlakes, pycodestyle, and McCabe into a single tool for checking syntax, style, and complexity
+Black: not only checks code style but also automatically formats the code to conform to PEP8
+
+4. What is a “code formatter”? Research the Python tool `black`
+Ans ~ A "code formatter" is a tool that automatically reformats source code to adhere to a predefined
+style guide or set of rules. It helps developers save time and effort by automatically fixing
+style and formatting issues, making code consistent, and reducing the chance of introducing
+errors. "Black" is a Python code formatter that automatically reformats the code to conform
+to PEP8 style guide. It uses a set of heuristics to format the code, such as
+line length, blank lines, import sorting, and string quotes.
+
+5. Try to run one or two of these tools on some (or all!) of the code
+you have written so far. See what you can make of their output.
+
+
+
+
+
+
+
+
+

@@ -7,10 +7,8 @@ def sum_of_squares(numbers):
     return sum([x * x for x in numbers])
 
 
-
-
-
 # ' The function still works if the list is empty because it's sum will be zero'
+
 
 # Write a function called `apply()` which takes two arguments:
 #     a. A list of `items`;
@@ -19,6 +17,8 @@ def sum_of_squares(numbers):
 #     the function `f` on the corresponding value in `items`.
 def apply(items, f):
     return [f(x) for x in items]
+
+
 #
 #
 def plus_one(x):
@@ -27,7 +27,6 @@ def plus_one(x):
 
 my_list = [1, 2, 3, 4, 5]
 result = apply(my_list, plus_one)
-
 
 
 def adds_up_to_target(nums, target):
@@ -39,7 +38,6 @@ def adds_up_to_target(nums, target):
                     return (index, index_two)
 
 
-
 def main():
     print(sum_of_squares(numbers))
     print(result)
@@ -47,5 +45,4 @@ def main():
 
 
 if __name__ == "__main__":
-   main()
-
+    main()
