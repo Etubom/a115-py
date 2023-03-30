@@ -1,0 +1,29 @@
+1. Using type annotations, how do you indicate that a function may
+   return “an integer or None” What do you have to import for that?
+   Ans ~ 'from typing import Optional'
+2. How do you calculate the square root of a number `n` using the Python standard library?
+ Ans ~ import math
+       math.sqrt(n)
+3. Go back to the latest version of your super-power character or your wallet program and
+   add type annotations.
+4. EXTRA CREDIT: download and run the `mypy` tool on your type-annotated program. Did it complain about anything?
+5. What is PYTHONPATH?
+ Ans ~ Pythonpath is an environment variable that is used to specify the location of Python libraries.
+6. Split your program into two files - a module containing the definitions of the functions you wrote for it, and a main file which imports and uses those.
+7. EXTRA CREDIT: What is the `Enum` data type in Python?
+   Is it a mutable or immutable data type?
+   When is it preferable to use `Enum`s instead of any of the other types of collections we mentioned?
+
+  Ans ~ The Enum data type in Python is a class-based way of defining symbolic names that represent values.
+   Enums are a way to organize and define a fixed set of constant values that are used throughout your code.
+
+   Enum is an immutable data type, which means that once an enumeration is defined, its members cannot be modified.
+
+   Enums are preferable to other types of collections when you want to define a fixed set of values that are not expected to change. They make your code more readable and help to prevent errors by ensuring that you use the correct values.
+
+    Here are some examples of when you might want to use Enums:
+
+    Defining a list of options for a user to choose from in a dropdown menu.
+    Representing the days of the week, the months of the year, or other fixed sets of values.
+    Creating a set of status codes that your program can use to communicate with external systems or services.
+    Defining different types of errors or exceptions that your program might encounter.
