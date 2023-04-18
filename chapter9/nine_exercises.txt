@@ -19,7 +19,8 @@
 
    Enum is an immutable data type, which means that once an enumeration is defined, its members cannot be modified.
 
-   Enums are preferable to other types of collections when you want to define a fixed set of values that are not expected to change. They make your code more readable and help to prevent errors by ensuring that you use the correct values.
+   Enums are preferable to other types of collections when you want to define a fixed set of values that are not expected to change.
+    They make your code more readable and help to prevent errors by ensuring that you use the correct values.
 
     Here are some examples of when you might want to use Enums:
 

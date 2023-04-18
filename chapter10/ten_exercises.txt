@@ -1,0 +1,58 @@
+1. What are “environment variables”? Note that this is not a concept specific to Python,
+   it’s more about operating systems in general. What’s an example of a specific environment
+   variable we’ve already talked about (which does have to do with Python)?
+   Ans ~ Environment variables are essentially a set of key-value pairs that are stored in the operating system's
+    memory and are accessible to all running processes. These variables can be used to store information
+    such as file paths, default options, system settings,
+    and other environment-specific data that is required by programs to function correctly
+    An environment variable we have talked about is PYTHONPATH which contains a list of directories
+    where python should look for modules and packages when importing them in a python script.
+
+2. How can you access the value of a given environment variable from within your Python code?
+   Ans (eg) ~import os
+             #Accessing the value of an environment variable
+             value = os.environ.get('ENVIRONMENT_VARIABLE_NAME')
+
+   How can you set the value of an environment variable from within your Python code?
+   Ans ~ import os
+        #Setting the value of an environment variable
+        os.environ['ENVIRONMENT_VARIABLE_NAME'] = 'new_value'
+
+3. Create a new virtual environment (either from the command line or from within PyCharm) for your
+   superpower character project. Create a separate one for the project from Part 7.
+
+   How do you know whether you currently have an active virtual environment?
+   Ans ~ To know whether you currently have an active virtual environment, you can look for the presence of
+   the virtual environment's name in your command prompt or terminal. If the name of the virtual
+   environment is displayed in your prompt, it means that you are currently using that virtual
+   environment. For example, if you see something like (myenv) user@host:~/project$ in your
+   prompt, it means that the virtual environment named myenv is currently active.
+
+   How do you know which one is active?
+   Ans ~ To know which of our environment is active, Type 'pip list' in your command prompt or terminal,
+   and you will see a list of all the installed packages and their versions, along with the
+   name of the active virtual environment in parentheses.
+
+   How can you list all the virtual environments you have created?
+   Ans ~ To list all the virtual environments you have created, you can navigate to the directory where virtual
+   environments are typically stored (~/.virtualenvs on Unix-based systems or %USERPROFILE%\Envs on Windows),
+   and you will see a list of directories, each corresponding to a virtual environment you have created.
+
+   How can you switch among them?
+   To switch among virtual environments, you can use the workon command (if you are using
+   the virtualenvwrapper package) or activate the virtual environment manually.
+
+4. What is a `requirements.txt` file typically used for in a Python project?
+   Ans ~ A requirements.txt file is typically used in a Python project to specify the dependencies that
+         the project requires to run.
+
+5. EXTRA CREDIT: What is `poetry`?
+   Ans ~ Poetry is a package and dependency manager for Python that allows you to easily manage your
+         project's dependencies, virtual environments, and packaging.It simplifies the process of creating and managing
+         virtual environments, installing packages, and configuring your project. It uses a pyproject.toml file
+         to define your project's metadata, dependencies, and build configuration, and allows you to manage
+         these dependencies through a command-line interface.
+
+6. Find the official Python documentation for the `random`module.
+   Read about the following functions in particular (easier if done in this order):
+   `random.random()`, `random.choice()`, `random.randrange()`, `random.randint()`
