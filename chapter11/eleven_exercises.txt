@@ -1,0 +1,26 @@
+1. In object-oriented programming, what is a “constructor”? Can you define a useful constructor
+   for the Wallet class?
+   Ans ~ In object-oriented programming, a constructor is a special method or function that is
+    called when an object is created from a class. The purpose of the constructor is to initialize
+    the object's attributes or properties with some default values or values passed in as arguments.
+                    class Wallet:
+                        def __init__(self, name: str):
+                            self.name = name
+                            self.balances = {}
+
+2. In the code for your super-power character, replace your character’s wallet with an instance
+   of the class Wallet, instead of a simple dictionary. Feel free to change or enhance that class
+   to better suit your needs. It’s probably a good idea to keep that class in a separate module
+    (like wallet.py maybe).
+
+3. Improve the `.spend_money()` method of the Wallet class so it doesn’t allow spending money they don’t have.
+4. Add a `.deposit_money()` method to the Wallet class.
+5. Can you turn your whole character into an instance of a class?
+6. Give your character a `.give_money()` method, which takes
+   another character as an argument, together with a currency and an amount. The method should transfer that amount
+    of currency (if available) from your character’s wallet to the other character’s wallet,
+    using the appropriate Wallet methods.
+7. EXTRA CREDIT: What is class “inheritance” and how does it work in Python?
+    Ans ~ Inheritance is a mechanism in object-oriented programming (OOP) that allows a new class, called the derived
+          or subclass, to be based on an existing class, called the base or superclass. The derived class inherits all the
+          properties and methods of the base class and can also add its own properties and methods.
