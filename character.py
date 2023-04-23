@@ -1,4 +1,5 @@
 from typing import List, Dict
+from wallet import Wallet
 
 
 class Character:

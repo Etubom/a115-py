@@ -3,8 +3,8 @@ from character import Character
 from wallet import Wallet
 from typing import Dict
 
-py_character_wallet = Wallet()
-py_character = Character()
+py_character_wallet = Wallet("py_character's multi-currency wallet")
+py_character = Character("Neo", py_character_wallet)
 
 character_super_powers: Dict[str, int] = {
     "reading": 81,
@@ -14,9 +14,7 @@ character_super_powers: Dict[str, int] = {
     "invisibility": 45,
     "blink": 80,
 }
-py_character.name = "Neo"
 py_character_initial_balances = {"dollars": 170.0, "pounds": 50.0, "euros": 38.0}
-py_character_wallet.name = "py_character's multi-currency wallet"
 py_character_wallet.balances = py_character_initial_balances
 
 
