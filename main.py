@@ -1,10 +1,7 @@
-# import py_character
+
 from character import Character
 from wallet import Wallet
 from typing import Dict
-
-py_character_wallet = Wallet("py_character's multi-currency wallet")
-py_character = Character("Neo", py_character_wallet)
 
 character_super_powers: Dict[str, int] = {
     "reading": 81,
@@ -14,14 +11,55 @@ character_super_powers: Dict[str, int] = {
     "invisibility": 45,
     "blink": 80,
 }
-py_character_initial_balances = {"dollars": 170.0, "pounds": 50.0, "euros": 38.0}
-py_character_wallet.balances = py_character_initial_balances
+
+# create initial wallet balances for characters
+jake_balances: Dict[str, int] = {'USD': 50, 'EUR': 70, 'GBP': 65}
+mina_balances: Dict[str, int] = {'USD': 80, 'EUR': 85, 'GBP': 45}
+
+# create wallet for characters
+jake_wallet = Wallet('Jake', jake_balances)
+mina_wallet = Wallet('Mina', mina_balances)
+
+# create characters with wallet
+jake = Character('Jake', jake_wallet)
+mina = Character('Mina', mina_wallet)
+
+# print initial balances
+print(f"{jake.name}'s balances: {jake.wallet.balances}")
+print(f"{mina.name}'s balances: {mina.wallet.balances}")
+
+# transfer money from Mina to Jake
+mina.give_money(jake, 'USD', 10)
+
+# print updated balances
+print(f"{jake.name}'s balances: {jake.wallet.balances}")
+print(f"{mina.name}'s balances: {mina.wallet.balances}")
+
+# transfer money from Jake to Mina
+jake.give_money(mina, 'GBP', 65)
+
+# print updated balances
+print(f"{jake.name}'s balances: {jake.wallet.balances}")
+print(f"{mina.name}'s balances: {mina.wallet.balances}")
+
+# transfer money from Jake to Mina to test insufficient funds
+jake.give_money(mina, 'GBP', 10)
+
+# print give_money()  not enough currency
+print(f"{jake.name}'s balances: {jake.wallet.balances}")
+
+# spend money response when insufficient funds
+print(jake.wallet.spend_money('GBP', 10))
 
 
-def main():
-    print(py_character.super_powers_at_or_above_given_number(character_super_powers, 70))
-    print(py_character_wallet.spend_money("dollars", 38))
 
 
-if __name__ == "__main__":
-    main()
+
+
+
+# def main():
+#
+#
+#
+# if __name__ == "__main__":
+#     main()

@@ -14,15 +14,12 @@ class Wallet:
         if self.get_balance_for(currency) >= amount:
             self.balances[currency] -= amount
             return self.balances[currency]
-        else:
-            return f"Insufficient funds  {self.balances[currency]}"
+
+        return f"Insufficient funds  {self.balances[currency]}"
 
     def deposit_money(self, currency: str, amount: int) -> int:
-        if currency in self.balances:
-            self.balances[currency] += amount
-        else:
-            self.balances[currency] = amount
-            return self.balances[currency]
+        self.balances[currency] = self.balances.get(currency, 0) + amount
+        return self.balances[currency]
 
     def get_balance_for(self, currency: str) -> int:
         return self.balances.get(currency, 0)
