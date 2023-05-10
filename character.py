@@ -1,4 +1,4 @@
-from typing import List, Dict
+from typing import List, Dict, Tuple
 
 # import wallet
 from wallet import Wallet
@@ -18,12 +18,18 @@ class Character:
                 filtered_list_of_powers.append(key)
         return filtered_list_of_powers
 
-    def give_money(self, other: "Character", currency: str, amount: int) -> bool:
+    def give_money(
+        self, other: "Character", currency: str, amount: int
+    ) -> Tuple[Wallet, Wallet]:
         if self.wallet.get_balance_for(currency) >= amount:
-            self.wallet.spend_money(currency, amount)
-            other.wallet.deposit_money(currency, amount)
+            sender_wallet = Wallet(self.name, self.wallet.balances.copy())
+            recipient_wallet = Wallet(other.name, other.wallet.balances.copy())
+
+            sender_wallet.spend_money(currency, amount)
+            recipient_wallet.deposit_money(currency, amount)
+
             print(f"{self.name} gave {other.name} {amount} {currency}.")
-            return True
+            return sender_wallet, recipient_wallet
 
         print(f"{self.name} doesn't have enough {currency}.")
-        return False
+        return self.wallet, other.wallet
