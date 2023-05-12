@@ -1,0 +1,46 @@
+1) Research the “stack” data structure. See if you can find a clean Python implementation of a stack.
+    Ans ~ In Python, a stack is a data structure that follows the Last-In-First-Out (LIFO) principle,
+    meaning that the last element added to the stack is the first one to be removed.
+    class Stack:
+    def __init__(self):
+        self.items = []
+
+    def push(self, item):
+        self.items.append(item)
+
+    def pop(self):
+        return self.items.pop()
+
+    def is_empty(self):
+        return len(self.items) == 0
+
+    def peek(self):
+        return self.items[-1]
+
+    def size(self):
+        return len(self.items)
+
+2) When your programme errors out with an exception, other than the exception type and the error message,
+  Python also typically prints out multiple lines of details, trying to point out exactly where in your code this happened.
+  What is the technical name for this printout? Make sure you know how to read and interpret those.
+  Ans ~ The technical name for the printout that Python displays when an exception is raised is a traceback.
+
+3) In the code you’ve written so far, are you able to identify any situations where exceptions
+   might arise? How would you process those in a safer way, if you had to?
+  Ans ~ The methods in both wallet and character use get() method to access
+        key values and return 0 deposit_money() and get_balance_for() meethods
+        instead of throwing an exception.
+
+4) In the `except:` portion of a `try / except` block, how can you get the text
+   of the original message of the exception that would have been raised?
+   Ans ~
+   try:
+    # some code that may raise an exception
+    except Exception as e:
+    # handle the exception
+    print(f"An error occurred: e")
+5) What is the `finally:` block in a `try / except` used for? How about `else:`?
+   Ans ~ The finally block is used to ensure that a block of code is always
+     executed, regardless of whether an exception was raised or not, while the
+     else block is used to specify code that should only run if the try block
+     was successful.

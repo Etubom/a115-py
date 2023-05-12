@@ -1,10 +1,10 @@
 from typing import Dict
 
 
-# In the code for your super-power character, replace your character’s wallet with an instance
-#    of the class Wallet, instead of a simple dictionary. Feel free to change or enhance that class
-#    to better suit your needs. It’s probably a good idea to keep that class in a separate module
-#     (like wallet.py maybe)
+class InsufficientFundsException(Exception):
+    pass
+
+
 class Wallet:
     def __init__(self, name: str, initial_balances: Dict[str, int] = {}):
         self.name = name
@@ -15,7 +15,9 @@ class Wallet:
             self.balances[currency] -= amount
             return self.balances[currency]
 
-        return f"Insufficient funds  {self.balances[currency]}"
+        raise InsufficientFundsException(
+            f"Insufficient funds  {self.balances[currency]}"
+        )
 
     def deposit_money(self, currency: str, amount: int) -> int:
         self.balances[currency] = self.balances.get(currency, 0) + amount
