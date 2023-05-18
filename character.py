@@ -1,4 +1,4 @@
-from typing import List, Dict
+from typing import List, Dict, Tuple
 
 # import wallet
 from wallet import Wallet
@@ -22,6 +22,7 @@ class Character:
         if self.wallet.get_balance_for(currency) >= amount:
             self.wallet.spend_money(currency, amount)
             other.wallet.deposit_money(currency, amount)
+
             print(f"{self.name} gave {other.name} {amount} {currency}.")
             return True
 

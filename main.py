@@ -49,7 +49,7 @@ jake.give_money(mina, 'GBP', 10)
 print(f"{jake.name}'s balances: {jake.wallet.balances}")
 
 # spend money response when insufficient funds
-print(jake.wallet.spend_money('GBP', 10))
+print(jake.wallet.spend_money('GBP', 70))
 
 
 
