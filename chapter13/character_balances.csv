@@ -1,0 +1,3 @@
+currency,balance
+"('USD', 60)","('EUR', 70)","('GBP', 0)"
+"('USD', 70)","('EUR', 85)","('GBP', 110)"
