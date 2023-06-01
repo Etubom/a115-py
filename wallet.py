@@ -44,11 +44,16 @@ class Wallet:
             for row in reader:
                 print("print from load from csv", row)
 
-    def export_to_json(data: List[Dict[str, Any]], file_path: str) -> None:
-        with open(file_path, "w") as json_file:
+    def export_to_json(self, file_name: str) -> None:
+        with open(file_name, "r") as csv_file:
+            reader = csv.reader(csv_file)
+            data = [row for row in reader]
+
+        with open("output.json", "w") as json_file:
             json.dump(data, json_file, indent=4)
 
-    def load_from_json(file_path: str) -> List[List[str]]:
-        with open(file_path, "r") as json_file:
+    def load_from_json(self, file_name: str) -> List[List[str]]:
+        with open(file_name, "r") as json_file:
             data = json.load(json_file)
+            print("data from json", data)
         return data

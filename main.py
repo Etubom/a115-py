@@ -60,6 +60,10 @@ wallet.export_to_csv(
 
 wallet.load_from_csv("chapter13/character_balances.csv")
 
+wallet.export_to_json("chapter13/character_balances.csv")
+
+wallet.load_from_json("output.json")
+
 # def main():
 #
 #
