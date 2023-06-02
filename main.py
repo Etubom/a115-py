@@ -1,3 +1,5 @@
+import os
+
 from character import Character
 from wallet import Wallet
 from typing import Dict
@@ -19,7 +21,6 @@ mina_balances: Dict[str, int] = {"USD": 80, "EUR": 85, "GBP": 45}
 # create wallet for characters
 jake_wallet = Wallet("Jake", jake_balances)
 mina_wallet = Wallet("Mina", mina_balances)
-wallet = Wallet("transformer")
 
 # create characters with wallet
 jake = Character("Jake", jake_wallet)
@@ -53,16 +54,28 @@ print(f"{jake.name}'s balances: {jake.wallet.balances}")
 # print(jake.wallet.spend_money("GBP", 70))
 
 # write balance to csv file
-wallet.export_to_csv(
-    data=[jake_wallet.balances, mina_wallet.balances],
-    file_path="chapter13/character_balances.csv",
-)
+jake_wallet.export_to_csv("jake_balances.csv")
+mina_wallet.export_to_csv("mina_balances.csv")
 
-wallet.load_from_csv("chapter13/character_balances.csv")
+jake_wallet.export_to_json("jake_balances.json")
+mina_wallet.export_to_json("mina_balances.json")
 
-wallet.export_to_json("chapter13/character_balances.csv")
+jake_csv_path = "jake_balances.csv"
+mina_csv_path = "mina_balances.csv"
 
-wallet.load_from_json("output.json")
+if os.path.exists(jake_csv_path):
+    print("Jakes wallet csv", jake_wallet.load_from_csv(jake_csv_path))
+else:
+    print(f"CSV file '{jake_csv_path}' does not exist.")
+
+if os.path.exists(mina_csv_path):
+    print("Minas wallet csv", mina_wallet.load_from_csv(mina_csv_path))
+else:
+    print(f"CSV file '{mina_csv_path}' does not exist.")
+
+print("Jake wallet json>>", jake_wallet.load_from_json("jake_balances.json"))
+print("Mina wallet json>>", mina_wallet.load_from_json("mina_balances.json"))
+
 
 # def main():
 #
