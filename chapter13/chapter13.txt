@@ -1,0 +1,23 @@
+What are some other “file formats”?
+
+Ans ~ PDF,json,txt,jpeg,svg
+
+What are `STDIN`, `STDOUT` and `STDERR`?
+
+Ans ~ STDIN, STDOUT, and STDERR are three standard streams in Unix-like operating systems.
+
+STDIN (standard input) is a stream of data that is read by a program.
+It is typically used to read input from the user, such as through the keyboard or a file.
+---------------------------------------------------------------------------------------------
+STDOUT (standard output) is a stream of data that is written by a program.
+ It is typically used to write output to the user, such as on the screen or a file.
+ ----------------------------------------------------------------------------------------------
+STDERR (standard error) is a stream of data that is used to write error messages from a program.
+ It is typically used to write error messages to the user, such as on the screen or a file.
+ -----------------------------------------------------------------------------------------------
+These three standard streams are often used in conjunction with the read() and write()
+functions to read and write data to and from a program.
+
+What can you learn about “decorators” in Python?
+Decorators are a powerful tool in Python that allow you to modify the behavior of functions without
+having to change the function's code. They are often used to add logging, timing, or other functionality to functions.
