@@ -13,15 +13,26 @@ class Wallet:
         self.balances = initial_balances
 
     def spend_money(self, currency: str, amount: int) -> int:
-        if self.get_balance_for(currency) >= amount:
-            self.balances[currency] -= amount
-            return self.balances[currency]
-
-        raise InsufficientFundsException(
-            f"Insufficient funds  {self.balances[currency]}"
-        )
+        if currency in self.balances:
+            if self.balances[currency] >= amount:
+                self.balances[currency] = self.balances[currency] - amount
+            else:
+                raise ValueError("Insufficient balance")
+        else:
+            raise ValueError("Currency not found")
+        return self.balances[currency]
+        # if self.get_balance_for(currency) >= amount:
+        #     self.balances[currency] -= amount
+        #     return self.balances[currency]
+        #
+        # raise InsufficientFundsException(
+        #     f"Insufficient funds  {self.balances[currency]}"
+        # )
 
     def deposit_money(self, currency: str, amount: int) -> int:
+        # if currency not in self.balances:
+        #     self.balances[currency] = 0
+        # self.balances[currency] += amount
         self.balances[currency] = self.balances.get(currency, 0) + amount
         return self.balances[currency]
 

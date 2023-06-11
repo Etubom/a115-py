@@ -26,3 +26,15 @@
 
  4) What is “test driven development” (TDD)?
  ns ~ Test-Driven Development (TDD) is a software development approach that emphasizes writing tests before writing the actual code.
+
+ 6) In pytest, fixtures are a way to provide a fixed baseline or a set of pre-defined data, objects, or resources to your test functions.
+    Fixtures are functions that are defined using the @pytest.fixture decorator.
+    They can be used to initialize and configure resources that are required by your test cases, such as database connections, API clients, test data, or any other setup that needs to be performed before running the tests.
+
+    Fixtures provide a convenient way to:
+
+    Set up the necessary test environment: Fixtures can be used to create and configure objects or resources required by the tests, such as initializing a database connection, setting up a temporary file, or starting a test server.
+
+    Provide test data: Fixtures can generate or load test data that is needed for the tests to run. This can include sample input data, predefined database records, or any other data required for the test cases.
+
+    Manage test cleanup: Fixtures can also handle the cleanup or teardown tasks after the tests are executed. For example, closing connections, removing temporary files, or cleaning up any changes made during the tests.
