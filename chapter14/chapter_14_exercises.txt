@@ -1,0 +1,40 @@
+ 1) We mentioned “unit tests”, which are used to test individual low-level code units such as functions and methods.
+    We also mentioned higher-level “functional tests”, which are automated ways of testing the functionality of an entire system.
+    What other kinds of test suites can you learn about? For example, what are “integration tests”?
+    What are “non-functional tests”?
+ Ans ~ Integration tests: Integration tests are designed to verify that the different components or modules of a system work together correctly when integrated.
+       They ensure that the interactions between different parts of the software function as expected.
+       Integration testing can be performed at various levels, such as testing the integration between modules, services, or even external systems.
+
+ 2) What is “regression” and “regression testing”?
+ Ans ~ "Regression testing" is the process of running tests on a modified or updated software system to identify any regression defects.
+       The purpose of regression testing is to ensure that changes made to the application have not introduced any unintended side effects or caused regression issues that impact previously functioning features.
+
+ 3) What are “behaviour tests” (BDD)? What is “gherkin syntax”?How does that work in Python?
+ Ans ~ "Behaviour tests" or "Behavior-Driven Development (BDD)" is a software development methodology that focuses on collaboration and communication between developers, testers, and business stakeholders.
+        BDD aims to align technical requirements and business objectives by using a common language that all stakeholders can understand.
+
+        Gherkin is a human-readable, domain-specific language used to describe the behavior of a system in a structured format. It uses a set of keywords and syntax to define the features, scenarios, and steps involved.
+
+        E.G:
+            Feature: Login functionality
+                      As a user
+                      I want to be able to login to the systems
+
+        In Python, there are several BDD frameworks that support Gherkin syntax and facilitate behavior testing, such as Behave, Lettuce, and PyTest-BDD.
+        These frameworks allow you to write automated tests using Gherkin syntax and execute them using Python.
+
+ 4) What is “test driven development” (TDD)?
+ ns ~ Test-Driven Development (TDD) is a software development approach that emphasizes writing tests before writing the actual code.
+
+ 6) In pytest, fixtures are a way to provide a fixed baseline or a set of pre-defined data, objects, or resources to your test functions.
+    Fixtures are functions that are defined using the @pytest.fixture decorator.
+    They can be used to initialize and configure resources that are required by your test cases, such as database connections, API clients, test data, or any other setup that needs to be performed before running the tests.
+
+    Fixtures provide a convenient way to:
+
+    Set up the necessary test environment: Fixtures can be used to create and configure objects or resources required by the tests, such as initializing a database connection, setting up a temporary file, or starting a test server.
+
+    Provide test data: Fixtures can generate or load test data that is needed for the tests to run. This can include sample input data, predefined database records, or any other data required for the test cases.
+
+    Manage test cleanup: Fixtures can also handle the cleanup or teardown tasks after the tests are executed. For example, closing connections, removing temporary files, or cleaning up any changes made during the tests.
